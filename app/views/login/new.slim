@@ -1,0 +1,7 @@
+h1 ROCKET CHAT
+
+.login-box
+  - if session[:auth].present?
+      = session[:auth].to_h
+  - else
+      = link_to 'Login with Underline', 'auth/underline'
